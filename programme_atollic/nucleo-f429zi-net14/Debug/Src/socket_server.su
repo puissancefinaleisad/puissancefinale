@@ -1,0 +1,3 @@
+socket_server.c:18:5:connexion_tcp_server_wait	64	static
+socket_server.c:79:5:ssend_msg	8	static
+socket_server.c:96:5:sreceivemessage	16	static

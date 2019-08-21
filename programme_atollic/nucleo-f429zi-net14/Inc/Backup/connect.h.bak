@@ -1,0 +1,23 @@
+/*
+ * connect.h
+ *
+ *  Created on: 17 mai 2019
+ *      Author: isabelle
+ */
+
+#ifndef CONNECT_H_
+#define CONNECT_H_
+
+#define IP_SERVEUR "10.1.0.126"
+#define PORT 5001
+//#define KLISTEN_PORT 5002
+#define TAILLE_MAX 2000
+
+extern int g_socket_desc;
+extern int connexion (const char *, int);
+extern char message;
+extern int send_msg (int, const char *, int);
+extern int receivemessage (int, char *, int);
+
+
+#endif /* CONNECT_H_ */

@@ -1,0 +1,30 @@
+/*
+ * connect.c
+ *
+ *  Created on: 16 mai 2019
+ *      Author: isabelle
+ */
+#include "main.h"
+#include "cmsis_os.h"
+#include "lwip.h"
+#include <stdio.h>
+#include <sys/socket.h>
+//#include<arpa/inet.h>
+#include <inet.h>
+
+
+void connection (const char *addr, int port )
+{
+		server.sin_addr.s_addr = inet_addr("10.1.101.101");
+	  	server.sin_family = AF_INET;
+	  	server.sin_port = htons( 5001 );
+	  	//Connect to remote server
+	  		if (connect(socket_desc , (struct sockaddr *)&server , sizeof(server)) < 0)
+	  		{
+	  			puts("connect error");
+	  			return 1;
+	  		}
+
+	  		puts("Connected");
+	  		return 0;
+}

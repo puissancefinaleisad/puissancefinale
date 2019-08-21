@@ -1,0 +1,3 @@
+socket_client.c:37:5:connexion	40	static
+socket_client.c:77:5:send_msg	8	static
+socket_client.c:95:5:receivemessage	16	static
